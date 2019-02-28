@@ -1,0 +1,131 @@
+.fix-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 51px;
+  background-color: #000000;
+  z-index: 100;
+
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logo{
+      width: 131px;
+      height: auto;
+    }
+
+    nav{
+      width: 478px;
+
+      .menu-btn{
+        display: none;
+        width: 29px;
+        height: 17px;
+        position: relative;
+        outline: none !important;
+
+        div{
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          margin-bottom: 8px;
+          transition: all 0.5s;
+        }
+
+        .top{
+          transform: rotate(0deg);
+        }
+
+        .center{
+          transform: rotate(0deg);
+        }
+
+        .bottom{
+          margin-bottom: 0;
+          transform: rotate(0deg);
+        }
+      }
+
+      .active-menu{
+        .top{
+          transform: rotate(30deg);
+        }
+
+        .center{
+          opacity: 0;
+        }
+
+        .bottom{
+          transform: rotate(-30deg);
+        }
+      }
+
+      ul{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        li{
+          list-style: none;
+
+          a{
+            color: #ffffff !important;
+            font-size: 16px;
+            transition: all 0.5s;
+
+            &:hover{
+              color: $accent !important;
+            }
+          }
+        }
+      }
+    }
+
+    .phone{
+      color: #ffffff !important;
+      font-family: $f-bold;
+      font-size: 18px;
+      outline: none !important;
+    }
+
+    .lang{
+      position: absolute;
+      width: 175px;
+      right: 15px;
+      bottom: -35px;
+      display: flex;
+      justify-content: space-between;
+
+      a{
+        color: #ffffff !important;
+        outline: none !important;
+        opacity: 0.5;
+        transition: all 0.5s;
+        display: block;
+        position: relative;
+
+        &:first-child{
+          &::after{
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: -10px;
+            height: 16px;
+            width: 1px;
+            background-color: #ffffff;
+          }
+        }
+      }
+
+      .active-lang{
+        opacity: 1;
+      }
+    }
+  }
+}
