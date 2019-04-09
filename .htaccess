@@ -1,21 +1,12 @@
-AddDefaultCharset utf-8
-AddCharset utf-8 *
-<IfModule mod_charset.c>
-CharsetSourceEnc utf-8
-CharsetDefault utf-8
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
 
-
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
-
-#Сжимаем элементы с помощью mod_deflate
-<ifmodule mod_deflate.c=””>
-<filesmatch .(js|css)$=””>
-SetOutputFilter DEFLATE
-</filesmatch>
-</ifmodule>
-
-
+# END WordPress
