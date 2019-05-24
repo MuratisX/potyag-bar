@@ -4,8 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-
+	
 	<title>Potyag-Bar</title>
 
 	<link type="text/css" rel="stylesheet" href="/wp-content/themes/potyag-theme/assets/css/animate.css">
@@ -20,30 +19,22 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<?php wp_head(); ?>
-
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-<!---->
-<!---->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/jquery-3.2.1.min.js"></script>-->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/bootstrap.min.js"></script>-->
-<!---->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/validator.min.js"></script>-->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/jquery.maskedinput.min.js"></script>-->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/slick.min.js"></script>-->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/jquery.fancybox.min.js"></script>-->
-<!--	<!--    <script src="/js/youtube.js"></script>-->-->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/wow.min.js"></script>-->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/map.js"></script>-->
-<!---->
-<!--	<script src="/wp-content/themes/potyag-theme/assets/js/js.js"></script>-->
-
+	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div id="pageBackground" class="background-video" data-load-rules="true" data-day-rule-part="night">
+	<div class="overlay"></div>
+	<video class="video" style="opacity: 1;" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+		<source src="/wp-content/themes/potyag-theme/assets/img/dum.mp4">
+		<img src="/binaries/content/gallery/greygoose/homepage/homepage-night--background.jpg" alt="">
+	</video>
+	<div class="image" style="display:none;"></div>
+</div>
 
+<div class="wrapper">
 	<header>
 		<div class="fix-menu">
 			<div class="logo-phone">
@@ -53,14 +44,10 @@
 							<div class="logo-wrapper">
 								<img src="/wp-content/themes/potyag-theme/assets/img/logo.jpg" alt="" class="logo">
 							</div>
-							<div class="info-work">
-								<p>Пн-Чт (16:00 - 00:00) <br> Пт-Вс (16:00 - 02:00)</p>
-								<p>Киев. ул.Першотравнева 27</p>
-							</div>
-
+							
 							<div class="phone-wrapper">
 								<a href="tel:+380636219018" class="phone">+38 097 471 71 10</a>
-								<a href="#" class="callback" data-toggle="modal" data-target="#quest-modal">Замовити стіл</a>
+								<a href="#" class="callback" data-toggle="modal" data-target="#quest-modal">Забронювати</a>
 							</div>
 
 							<a href="#" class="mob-menu-btn" id="menu-btn">
@@ -70,23 +57,23 @@
 							</a>
 							<nav class="mob-menu" id="mob-menu">
 								<ul>
-									<li><a href="/" class="scroll-to">Головна</a></li>
+									<li><a href="#main-banner" class="scroll-to">Головна</a></li>
 									<li><a href="#about-us" class="scroll-to">Про нас</a></li>
-									<li><a href="#our-tobacco" class="scroll-to">Галерея</a></li>
+									<li><a href="#gallery" class="scroll-to">Галерея</a></li>
 									<li><a href="#testimonials" class="scroll-to">Відгуки</a></li>
 									<li><a href="#address-map" class="scroll-to">Контакти</a></li>
-									<li><a href="/menu" class="scroll-to">Меню</a></li>
+									<li><a href="menu">Меню</a></li>
 								</ul>
 								<div class="fix-content">
 									<div class="mob-phone-wrapper">
 										<div class="inner">
 
 											<div>
-												<p>Розклад роботы: Пн-Чт (16:00 - 00:00) Пт-Вс (16:00 - 02:00)</p>
+												<p>График работы: Пн-Чт (16:00 - 00:00) Пт-Вс (16:00 - 02:00)</p>
 											</div>
 											<div>
 												<a href="tel:+380636219018" class="phone">+38 097 471 71 10</a>
-												<a href="#" class="callback" data-toggle="modal" data-target="#quest-modal">Замовити стіл</a>
+												<a href="#" class="callback" data-toggle="modal" data-target="#quest-modal">Забронювати</a>
 											</div>
 										</div>
 									</div>
@@ -102,12 +89,12 @@
 						<div class="content col-md-12">
 							<div class="menu">
 								<ul>
-									<li><a href="/" class="scroll-to">Головна</a></li>
+									<li><a href="#main-banner" class="scroll-to">Головна</a></li>
 									<li><a href="#about-us" class="scroll-to">Про нас</a></li>
-									<li><a href="#our-tobacco" class="scroll-to">Галерея</a></li>
+									<li><a href="#gallery" class="scroll-to">Галерея</a></li>
 									<li><a href="#testimonials" class="scroll-to">Відгуки</a></li>
 									<li><a href="#address-map" class="scroll-to">Контакти</a></li>
-									<li><a href="/menu" class="scroll-to">Меню</a></li>
+									<li><a href="menu">Меню</a></li>
 								</ul>
 							</div>
 						</div>
@@ -190,3 +177,4 @@
 			</div>
 		</div>
 	</div>
+	

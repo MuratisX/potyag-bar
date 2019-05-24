@@ -16,15 +16,31 @@
 			</div>
 		</div>
 	</div>
-	<a href="#" class="go-top up-btn"></a>
 </section>
 
 
 <div class="order-modal-btn">
-	<button class="modal-button"><img src="/wp-content/themes/potyag-theme/assets/img/logo.jpg"></button>
+	<button class="modal-button" class="callback" data-toggle="modal" data-target="#quest-modal"><img src="/wp-content/themes/potyag-theme/assets/img/logo.jpg"></button>
 </div>
 </div>
 
 <?php
 
+if (is_front_page()) {
+	echo '<script type="text/javascript">jQuery(document).on(\'click\', \'.scroll-to\', function (e) {
+	e.preventDefault();
+
+	var href = jQuery(this).attr(\'href\');
+
+	jQuery(\'html, body\').animate({
+           scrollTop: jQuery(href).offset().top
+       }, 1000);
+
+   });</script>';
+} else {
+	echo '<script type="text/javascript">
+	jQuery(\'.scroll-to\').removeClass(\'scroll-to\');
+
+  </script>';
+}
 wp_footer(); ?>

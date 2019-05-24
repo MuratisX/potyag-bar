@@ -44,18 +44,7 @@ jQuery(function() {
 
 
 
-
-
-    jQuery(document).on('click', '.scroll-to', function (e) {
-       e.preventDefault();
-
-       var href = jQuery(this).attr('href');
-
-        jQuery('html, body').animate({
-           scrollTop: jQuery(href).offset().top
-       }, 1000);
-
-   });
+    
 
 
     jQuery('.gallery-items').slick({
@@ -108,24 +97,6 @@ jQuery(function() {
         }
     });
 
-    setTimeout(function() {
-        jQuery('.cookie-container').slideDown(500);
-    }, 3000);
-
-    jQuery('.cookie-container .button').on('click', function(e) {
-        e.preventDefault();
-
-        jQuery('.cookie-container').slideUp(400);
-    });
-
-    jQuery(window).scroll(function () {
-        if (jQuery(this).scrollTop() >=100) {
-            jQuery(".go-top").fadeIn();
-        } else{
-            jQuery(".go-top").fadeOut();
-        }
-    });
-
     jQuery(document).on('click', '.close-modal', function() {
         jQuery('#quest-modal').hide();
     });
@@ -145,34 +116,6 @@ jQuery(function() {
     });
 
 
-
-    // jQuery('.banner').delay(4000).show('fade');
-    // jQuery('.js-onload').delay(4000).show('down');
-    //
-
-    jQuery('form').validator();
-
-    // DTA VALUE REPLACE
-
-
-
-
-
-
-    //
-
-
-
-
-
-    //
-
-
-
-
-
-
-    // PHONE MASK
 
     jQuery("input[type=tel]").mask("+38(999) 999-99-99");
 
@@ -263,35 +206,6 @@ jQuery(function() {
     jQuery('#pay-ok').find('input[name=phone]').val(localValue2);
     jQuery('#pay-ok').find('input[name=name]').val(localValue1);
 
-    /*function setcookie(a,b,c) {
-        if(c){
-            var d = new Date();
-                d.setTime(d.getTime()+c);
-        }
-        if(a && b) document.cookie = a+'='+ encodeURIComponent(b) +(c ? '; expires='+d.toUTCString() : '');else return false;
-    }
-
-    function getcookie(a) {
-        var b = new RegExp(a+'=([^;]){1,}');
-        var c = b.exec(document.cookie);
-        if(c) c = c[0].split('=');else return false;return c[1] ? decodeURIComponent(c[1]) : false;
-    }
-
-    soundButton.click(function() {
-        if(!sound) sound = 1;
-        if (sound == 1) {
-            setcookie("sound","1",30*3600*24*30*1000);
-            document.getElementById("sound").style.backgroundPosition = "0px";
-            audioLink.play();
-        } else if (sound == 0) {
-            setcookie("sound","0",30*3600*24*30*1000)
-            document.getElementById("sound").style.backgroundPosition = "-40px";
-        }
-    });
-
-    $(function () {
-        if (getcookie("sound") == "1") audioLink.play()
-    });*/
 
 
 
