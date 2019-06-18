@@ -25,6 +25,14 @@
 
 <body>
 
+<?php if ( is_active_sidebar( 'custom-header-widget' ) ) : ?>
+	<div class="lang-wrapper">
+		<?php dynamic_sidebar( 'custom-header-widget' ); ?>
+	</div>
+
+<?php endif; ?>
+
+
 <div id="pageBackground" class="background-video" data-load-rules="true" data-day-rule-part="night">
 	<div class="overlay"></div>
 	<video class="video" style="opacity: 1;" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
@@ -56,14 +64,12 @@
 								<div></div>
 							</a>
 							<nav class="mob-menu" id="mob-menu">
-								<ul>
-									<li><a href="#main-banner" class="scroll-to">Головна</a></li>
-									<li><a href="#about-us" class="scroll-to">Про нас</a></li>
-									<li><a href="#gallery" class="scroll-to">Галерея</a></li>
-									<li><a href="#testimonials" class="scroll-to">Відгуки</a></li>
-									<li><a href="#address-map" class="scroll-to">Контакти</a></li>
-									<li><a href="menu">Меню</a></li>
-								</ul>
+								<?php
+								$argc = array(
+									'theme_location' => 'main_menu',
+									'container' => 'false' ,
+								);
+								wp_nav_menu($argc);?>
 								<div class="fix-content">
 									<div class="mob-phone-wrapper">
 										<div class="inner">
@@ -88,14 +94,13 @@
 					<div class="row">
 						<div class="content col-md-12">
 							<div class="menu">
-								<ul>
-									<li><a href="#main-banner" class="scroll-to">Головна</a></li>
-									<li><a href="#about-us" class="scroll-to">Про нас</a></li>
-									<li><a href="#gallery" class="scroll-to">Галерея</a></li>
-									<li><a href="#testimonials" class="scroll-to">Відгуки</a></li>
-									<li><a href="#address-map" class="scroll-to">Контакти</a></li>
-									<li><a href="menu">Меню</a></li>
-								</ul>
+
+								<?php
+								$argc = array(
+									'theme_location' => 'main_menu',
+									'container' => 'false' ,
+								);
+								wp_nav_menu($argc);?>
 							</div>
 						</div>
 					</div>
@@ -177,4 +182,5 @@
 			</div>
 		</div>
 	</div>
+
 	

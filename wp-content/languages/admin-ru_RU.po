@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-03-13 06:58:35+0000\n"
+"PO-Revision-Date: 2019-06-12 09:50:45+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1519,7 +1519,7 @@ msgstr "Вы успешно обновили сайт до WordPress 5.0! Мы �
 
 #: wp-admin/about.php:135
 msgid "Say Hello to the New Editor"
-msgstr "Поприветствуйте новый редактор"
+msgstr "Привет, новый редактор!"
 
 #. translators: %s: WordPress version number
 #: wp-admin/about.php:69 wp-admin/about.php:124 wp-admin/about.php:630

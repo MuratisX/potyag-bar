@@ -44,7 +44,7 @@ jQuery(function() {
 
 
 
-    
+
 
 
     jQuery('.gallery-items').slick({
@@ -84,6 +84,16 @@ jQuery(function() {
 
 
     });
+
+    // jQuery('#sbi_images').slick({
+    //     autoplay: true,
+    //     autoplaySpeed: 8000,
+    //     appendArrows: false,
+    //     slidesToShow: 1,
+    //     dots: true,
+    //
+    //
+    // });
 
 
 

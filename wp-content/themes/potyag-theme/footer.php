@@ -24,6 +24,17 @@
 </div>
 </div>
 
+<script type="text/javascript">
+	jQuery('#sbi_images').slick({
+		autoplay: true,
+		autoplaySpeed: 8000,
+		appendArrows: false,
+		slidesToShow: 1,
+		dots: true,
+
+
+	});</script>
+
 <?php
 
 if (is_front_page()) {
